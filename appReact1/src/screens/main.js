@@ -4,6 +4,8 @@ import { StyleSheet, View } from 'react-native';
 import Header from '../components/header'
 import EnergyScreen from '../screens/energy'
 import BodyScreen from './body';
+import GasScreen from './gas';
+import FisicalDevicesScreen from './fisicalDevices';
 
 export default class Main extends React.Component {
   constructor(props){
@@ -13,18 +15,29 @@ export default class Main extends React.Component {
     }
   }
   render(){
-    let page
+    let page, title
     switch (this.state.pageState){
         case 0:
             page=<BodyScreen context={this}/>
+            title='DOMOTICS'
             break;
         case 1:
             page=<EnergyScreen context={this}/>
+            title='ENERGY MANAGEMENT'
+            break;
+        case 2:
+            page=<GasScreen context={this}/>
+            title='GAS ANALYSIS'
+            break;
+        case 3: 
+            page=<FisicalDevicesScreen context={this}/>
+            title='FISICAL DEVICES MANAGEMENT'
+            break;
     }
 
     return (
         <View style={styles.container}>
-          <Header/>
+          <Header title={title}/>
           {page}
         </View>
     )

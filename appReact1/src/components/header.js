@@ -1,13 +1,17 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const Header = () => {
-    return(
-        <View style ={styles.container}>
-            <Text style={styles.mainTxt}> DOMÓTICA </Text>
-        </View>
-    )
-}; export default Header
+export default class Header extends React.Component {
+    
+    render(){
+        const {title} = this.props
+        return(
+            <View style ={styles.container}>
+                <Text style={styles.mainTxt}> {title} </Text>
+            </View>
+        )
+    }
+}
 
 const styles = StyleSheet.create({
     container:{

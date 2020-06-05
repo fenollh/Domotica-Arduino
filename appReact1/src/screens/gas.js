@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet, Button } from 'react-native' 
 import BackButton from '../components/backButton'
 
-export default class EnergyScreen extends React.Component {
+export default class GasScreen extends React.Component {
 
     render(){
         return(

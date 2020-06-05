@@ -1,8 +1,9 @@
 import React from 'react'
-import { View, StyleSheet, Button } from 'react-native' 
+import { View, StyleSheet } from 'react-native' 
+
 import BackButton from '../components/backButton'
 
-export default class EnergyScreen extends React.Component {
+export default class FisicalDevicesScreens extends React.Component {
 
     render(){
         return(
@@ -22,6 +23,6 @@ const styles = StyleSheet.create({
         padding: '3%',
     },
     body:{
-        flex: 15,
+        flex:15,
     },
 })
