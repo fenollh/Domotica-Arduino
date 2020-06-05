@@ -1,8 +1,7 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, Text, TouchableHighlight } from 'react-native'
 
-import Icon from 'react-native-vector-icons/Ionicons';
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 export default class Section extends React.Component {
@@ -16,15 +15,19 @@ export default class Section extends React.Component {
 
     render(){
         let typeIcon
+        let title
         switch (this.state.type) {
             case 'energia':
-                typeIcon=<SimpleLineIcons name='energy' size={30} color='rgb(235,235,0)' />
+                typeIcon=<Ionicons name='ios-flash' size={40} color='rgb(245,245,0)' style={styles.icon}/>
+                title='ENERGY MANAGEMENT' 
                 break
             case 'quimica':
-                typeIcon=<FontAwesome5 name='radiation' size={30} color='rgb(0,255,0)'/>
+                typeIcon=<FontAwesome5 name='radiation' size={30} color='rgb(0,255,0)' style={styles.icon}/>
+                title='GAS ANALYSIS'
                 break
             case 'mecanica':
-                typeIcon=<FontAwesome5 name='warehouse' size={30} color='rgb(0,0,0)'/>
+                typeIcon=<FontAwesome5 name='warehouse' size={30} color='rgb(0,0,0)' style={styles.icon}/>
+                title='FISICAL DEVICES MANAGEMENT'
                 break
         }
 
@@ -32,9 +35,9 @@ export default class Section extends React.Component {
             <View style ={styles.container}>
                 <View style={styles.header}>
                     {typeIcon}
+                    <Text style={styles.title}>{title}</Text>
                 </View>
                 <View style={styles.body}>
-                    {this.state.body}
                 </View>
             </View>
         )
@@ -53,8 +56,17 @@ const styles = StyleSheet.create({
     },
     header:{
         flex:1,
+        flexDirection: 'row',
     },
     body: {
         flex: 3,
+    },
+    icon:{
+        marginEnd: '5%'
+    },
+    title:{
+        marginTop: '2%',
+        fontSize: 15,
+        fontWeight: 'bold',
     },
 })
