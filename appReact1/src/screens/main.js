@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import Header from '../components/header'
-import EnergyScreen from '../screens/energy'
+import Header from '../components/global/header'
+import EnergyScreen from './energy'
 import BodyScreen from './body';
 import GasScreen from './gas';
 import FisicalDevicesScreen from './fisicalDevices';
+import SeeMoreScreen from '../components/energy/seeMoreLights'
 
 export default class Main extends React.Component {
   constructor(props){
@@ -33,6 +34,10 @@ export default class Main extends React.Component {
             page=<FisicalDevicesScreen context={this}/>
             title='FISICAL DEVICES MANAGEMENT'
             break;
+        case 4:
+          page=<SeeMoreScreen context={this}/>
+          title='ENERGY MANAGEMENT'
+          break;
     }
 
     return (

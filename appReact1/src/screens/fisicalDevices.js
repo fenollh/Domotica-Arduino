@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native' 
 
-import BackButton from '../components/backButton'
+import BackButton from '../components/global/backButton'
 
 export default class FisicalDevicesScreens extends React.Component {
 

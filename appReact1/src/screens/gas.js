@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, StyleSheet, Button } from 'react-native' 
-import BackButton from '../components/backButton'
+import BackButton from '../components/global/backButton'
 
 export default class GasScreen extends React.Component {
 

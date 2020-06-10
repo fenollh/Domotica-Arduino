@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, TouchableOpacity, StyleSheet } from 'react-native'
-import Section from '../components/section'
+import Section from '../components/global/section'
 
 export default class BodyScreen extends React.Component{
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet, Text, Alert, TouchableOpacity } from 'react-native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
-import {changeLightState} from '../bluetoothFunctions/changeLightState'
+import {changeLightState} from '../../bluetoothFunctions/changeLightState'
 
 
 const ControlPanelBox = (props) => {

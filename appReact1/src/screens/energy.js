@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, StyleSheet, Text, TouchableOpacity, Alert } from 'react-native' 
 
-import BackButton from '../components/backButton'
-import EnergyStateData from '../components/energyStatus'
-import EnergyControlPanel from '../components/energyControlPanel'
+import BackButton from '../components/global/backButton'
+import EnergyStateData from '../components/energy/energyStatus'
+import EnergyControlPanel from '../components/energy/energyControlPanel'
 
 export default class EnergyScreen extends React.Component {
     constructor(props){
@@ -60,9 +60,6 @@ export default class EnergyScreen extends React.Component {
         this.setState({lightsOn: this.countLightsOn()})
     }
 
-
-
-
     render(){
         return(
             <View style={styles.container}>
@@ -74,7 +71,7 @@ export default class EnergyScreen extends React.Component {
                     <View style={{flex:5}}>
                         <EnergyControlPanel context={this}/>
                     </View> 
-                    <TouchableOpacity style = {styles.seeMore} onPress={() => Alert.alert('moved to see more screen')}>
+                    <TouchableOpacity style = {styles.seeMore} onPress={() => this.props.context.setState({pageState: 4})}>
                         <Text style={styles.seeMoreTxt}>SEE MORE</Text>
                     </TouchableOpacity>
                 </View>

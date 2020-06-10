@@ -1,11 +1,10 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native' 
 
-import BackButton from '../components/backButton'
-import EnergyStateData from '../components/energyStatus'
-import EnergyControlPanel from '../components/energyControlPanel'
+import BackButton from '../global/backButton'
+import EnergyControlPanel from './energyControlPanel'
 
-export default class EnergyScreen extends React.Component {
+export default class SeeMoreScreen extends React.Component {
     constructor(props){
         super(props)
     }
@@ -15,7 +14,7 @@ export default class EnergyScreen extends React.Component {
             <View style={styles.container}>
                 <View style={styles.body}>
                     <View style={{flex:5}}>
-                        <EnergyControlPanel context={this}/>
+                        
                     </View> 
                 </View>
                 <BackButton context={this.props.context}/>
