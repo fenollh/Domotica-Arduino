@@ -4,6 +4,13 @@ import BackButton from '../components/backButton'
 
 export default class GasScreen extends React.Component {
 
+    constructor(props){
+        super(props)
+        this.state={
+            
+        }
+    }
+
     render(){
         return(
             <View style={styles.container}>

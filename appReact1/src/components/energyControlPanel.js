@@ -20,8 +20,9 @@ const EnergyControlPanel = (props) => {
                 data={state.favourites}
                 renderItem={({item}) => (
                     <ControlPanelBox
-                        name={state.lightsStatus[item].name}
-                        status={state.lightsStatus[item].status}
+                        index={item}
+                        item={state.lightsStatus[item]}
+                        context={props.context}
                     />
                 )}
             />

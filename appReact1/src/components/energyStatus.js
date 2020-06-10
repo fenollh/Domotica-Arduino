@@ -27,7 +27,7 @@ const EnergyStateData = (props) => {
                 <Text style={styles.Txt}> LIGHTS ON </Text>
             </View>
             <View style={[{flex: 2}, styles.subtitAlign]}>
-                <Text style={styles.Txt}>{props.state.lightsOn}/14</Text>
+                <Text style={styles.Txt}>{props.state.lightsOn}/16</Text>
             </View>
         </View>
     </View>
